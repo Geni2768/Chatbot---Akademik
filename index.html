@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Chatbot Akademik - bantuan informasi pendaftaran dan perkuliahan.">
+  <title>AkademikKu | Chatbot Akademik</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-mark">A</div>
+        <div><strong>AkademikKu</strong><span>Asisten Akademik</span></div>
+      </div>
+
+      <button class="new-chat" id="newChatBtn"><span>＋</span> Percakapan baru</button>
+
+      <p class="nav-heading">TOPIK INFORMASI</p>
+      <button class="topic-link active" data-topic="pendaftaran"><span>✦</span> Pendaftaran Mahasiswa</button>
+      <button class="topic-link" data-topic="perkuliahan"><span>▦</span> Informasi Perkuliahan</button>
+      <button class="topic-link" data-topic="jadwal"><span>◷</span> Jadwal Kuliah</button>
+      <button class="topic-link" data-topic="krs"><span>▤</span> KRS & KHS</button>
+      <button class="topic-link" data-topic="administrasi"><span>♧</span> Administrasi Akademik</button>
+
+      <div class="sidebar-note">
+        <div class="note-icon">i</div>
+        <div><strong>Informasi demo</strong><p>Jawaban menggunakan data contoh. Pastikan informasi resmi dikonfirmasi ke kampus.</p></div>
+      </div>
+      <div class="sidebar-footer"><div class="status-dot"></div> Chatbot siap membantu</div>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar">
+        <button class="menu-btn" id="menuBtn" aria-label="Buka menu">☰</button>
+        <div class="breadcrumb">Layanan Akademik <span>/</span> <strong>Chatbot</strong></div>
+        <div class="online-label"><span class="status-dot"></span> Online</div>
+      </header>
+
+      <section class="chat-layout">
+        <div class="welcome-block" id="welcomeBlock">
+          <div class="hero-icon">✦</div>
+          <p class="eyebrow">ASISTEN INFORMASI KAMPUS</p>
+          <h1>Halo! Ada yang bisa<br><span>aku bantu hari ini?</span></h1>
+          <p class="welcome-copy">Tanyakan informasi pendaftaran, jadwal kuliah, KRS, atau layanan administrasi akademik.</p>
+          <div class="suggestion-grid">
+            <button class="suggestion-card" data-question="Apa saja syarat pendaftaran mahasiswa baru?"><span class="suggestion-icon violet">✦</span><span><strong>Pendaftaran mahasiswa baru</strong><small>Syarat dan cara mendaftar</small></span><span class="arrow">↗</span></button>
+            <button class="suggestion-card" data-question="Bagaimana cara melihat jadwal kuliah?"><span class="suggestion-icon blue">◷</span><span><strong>Jadwal perkuliahan</strong><small>Cara melihat jadwal kuliah</small></span><span class="arrow">↗</span></button>
+            <button class="suggestion-card" data-question="Bagaimana cara mengisi KRS?"><span class="suggestion-icon peach">▤</span><span><strong>KRS dan KHS</strong><small>Panduan akademik mahasiswa</small></span><span class="arrow">↗</span></button>
+            <button class="suggestion-card" data-question="Bagaimana cara mengajukan surat mahasiswa aktif?"><span class="suggestion-icon green">♧</span><span><strong>Administrasi akademik</strong><small>Surat dan layanan kampus</small></span><span class="arrow">↗</span></button>
+          </div>
+        </div>
+
+        <div class="messages" id="messages" aria-live="polite"></div>
+
+        <div class="composer-wrap">
+          <div class="composer">
+            <textarea id="messageInput" rows="1" placeholder="Tulis pertanyaan akademik kamu..." aria-label="Tulis pertanyaan"></textarea>
+            <button id="sendBtn" class="send-btn" aria-label="Kirim pesan">↑</button>
+          </div>
+          <div class="composer-foot"><span>AkademikKu dapat membuat kekeliruan. Periksa kembali informasi penting.</span><span>Powered by HTML, CSS & JavaScript</span></div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="assets/script.js"></script>
+</body>
+</html>
